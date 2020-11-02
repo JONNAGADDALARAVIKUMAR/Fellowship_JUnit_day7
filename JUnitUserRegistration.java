@@ -1,5 +1,6 @@
 package jUnitPattern;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
@@ -72,5 +73,48 @@ public class JUnitUserRegistration {
 		String result = test.testPattern(passwordRejex, password);
 		System.out.println(password+" : "+result);
 		Assert.assertEquals("Validated", result);
+	}
+
+	@Test
+	public void testValidEmailSamples() { //Tests Password
+		
+		ArrayList<String> validEmailList = new ArrayList<String>();
+		ArrayList<String> invalidEmailList = new ArrayList<String>();
+			validEmailList.add("abc@yahoo.com");
+			validEmailList.add("abc-100@yahoo.com");
+			validEmailList.add("abc.100@yahoo.com");
+			validEmailList.add("abc111@abc.com");
+			validEmailList.add("abc-100@abc.net");
+			validEmailList.add("abc.100@abc.com.au");
+			validEmailList.add("abc@1.com");
+			validEmailList.add("abc@gmail.com.com");
+			validEmailList.add("abc+100@gmail.com");
+			
+			invalidEmailList.add("abc");
+			invalidEmailList.add("abc@.com.my");
+			invalidEmailList.add("abc123@gmail.a");
+			invalidEmailList.add("abc123@.com");
+			invalidEmailList.add("abc123@.com.com");
+			invalidEmailList.add(".abc@abc.com");
+			invalidEmailList.add("abc()*@gmail.com");
+			invalidEmailList.add("abc@%*.com");
+			invalidEmailList.add("abc..2002@gmail.com");
+			invalidEmailList.add("abc.@gmail.com");
+			invalidEmailList.add("abc@abc@gmail.com");
+			invalidEmailList.add("abc@gmail.com.1a");
+			invalidEmailList.add("abc@gmail.com.aa.au");
+		System.out.println("\n");
+		
+		for(String emailSample : validEmailList) {
+			String result = test.testPattern(emailRejex, emailSample);
+			System.out.println(emailSample+" : "+result);
+			Assert.assertEquals("Validated", result);
+		}
+		for(String emailSample : invalidEmailList) {
+			String result = test.testPattern(emailRejex, emailSample);
+			System.out.println(emailSample+" : "+result);
+			Assert.assertEquals("Invalid", result);
+		}
+		System.out.println("\n");
 	}
 }
