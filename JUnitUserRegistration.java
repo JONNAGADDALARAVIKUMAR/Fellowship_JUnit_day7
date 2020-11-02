@@ -14,6 +14,9 @@ public class JUnitUserRegistration {
 	
 	String nameRejex = "^[A-Z]{1}+[A-Za-z]{2,}";
 	String mobileNumberRejex = "[+]{0,1}+91+[ ]+[1-9]{1}+[0-9]{9}";
+	String emailRejex = "[a-zA-Z]{1,}?[A-Za-z0-9]{0,1}+([-._+]{0,1}+[a-zA-Z0-9]{1,}){0,1}"
+			+ "+@+[a-zA-Z0-9]{1,}?([-._]{0,1}+[a-zA-Z0-9]{2,}){0,1}?([-._]{0,1}"
+			+ "+[a-zA-Z]{2,}){0,1}";
 
 	@Test
 	public void firstName() { //Tests First Name
@@ -45,6 +48,17 @@ public class JUnitUserRegistration {
 		
 		String result = test.testPattern(mobileNumberRejex, mobileNumber);
 		System.out.println(mobileNumber+" : "+result);
+		Assert.assertEquals("Validated", result);
+	}
+	
+	@Test
+	public void testEmail() { //Tests Email
+		
+		System.out.print("Email : ");
+		String email = scan.nextLine();
+		
+		String result = test.testPattern(emailRejex, email);
+		System.out.println(email+" : "+result);
 		Assert.assertEquals("Validated", result);
 	}
 }
