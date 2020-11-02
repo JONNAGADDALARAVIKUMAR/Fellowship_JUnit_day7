@@ -16,12 +16,13 @@ public class JUnitUserRegistration {
 	String nameRejex = "^[A-Z]{1}+[A-Za-z]{2,}";
 	String mobileNumberRejex = "[+]{0,1}+91+[ ]+[1-9]{1}+[0-9]{9}";
 	String passwordRejex = "(?=.{8,})(.*?[A-Z]{1,}.*)(.*?[0-9]{1,}.*)(.*?[.,=+?@!#$%^&*()_-]{1}.*)";
+	
 	String emailRejex = "[a-zA-Z]{1,}?[A-Za-z0-9]{0,1}+([-._+]{0,1}+[a-zA-Z0-9]{1,}){0,1}"
 			+ "+@+[a-zA-Z0-9]{1,}?([-._]{0,1}+[a-zA-Z0-9]{2,}){0,1}?([-._]{0,1}"
 			+ "+[a-zA-Z]{2,}){0,1}";
 
 	@Test
-	public void firstName() { //Tests First Name
+	public void validateFirstName() { //Tests First Name
 		
 		System.out.print("First Name : ");
 		String firstName = scan.next();
@@ -32,7 +33,7 @@ public class JUnitUserRegistration {
 	}
 
 	@Test
-	public void lastName() { //Tests Last Name
+	public void validateLastName() { //Tests Last Name
 		
 		System.out.print("Last Name : ");
 		String lastName = scan.next();
@@ -43,7 +44,7 @@ public class JUnitUserRegistration {
 	}
 	
 	@Test
-	public void mobileNumber() { //Tests Mobile Number
+	public void validateMobileNumber() { //Tests Mobile Number
 		
 		System.out.print("Mobile Number : ");
 		String mobileNumber = scan.nextLine();
@@ -54,7 +55,7 @@ public class JUnitUserRegistration {
 	}
 	
 	@Test
-	public void testEmail() { //Tests Email
+	public void validateEmail() { //Tests Email
 		
 		System.out.print("Email : ");
 		String email = scan.nextLine();
@@ -65,7 +66,7 @@ public class JUnitUserRegistration {
 	}
 	
 	@Test
-	public void testPassword() { //Tests Password
+	public void validatePassword() { //Tests Password
 		
 		System.out.print("Password : ");
 		String password = scan.nextLine();
@@ -76,7 +77,7 @@ public class JUnitUserRegistration {
 	}
 
 	@Test
-	public void testValidEmailSamples() { //Tests Email Pattern with Samples
+	public void validateEmailSamples() { //Tests Email Pattern with Samples
 		
 		ArrayList<String> validEmailList = new ArrayList<String>();
 		ArrayList<String> invalidEmailList = new ArrayList<String>();
