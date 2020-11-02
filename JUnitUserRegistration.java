@@ -76,7 +76,7 @@ public class JUnitUserRegistration {
 	}
 
 	@Test
-	public void testValidEmailSamples() { //Tests Password
+	public void testValidEmailSamples() { //Tests Email Pattern with Samples
 		
 		ArrayList<String> validEmailList = new ArrayList<String>();
 		ArrayList<String> invalidEmailList = new ArrayList<String>();
