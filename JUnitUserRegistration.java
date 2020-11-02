@@ -12,15 +12,24 @@ public class JUnitUserRegistration {
 	String nameRejex = "^[A-Z]{1}+[A-Za-z]{2,}";
 
 	@Test
-	public void testFirstName() {
+	public void testFirstName() { //Tests First Name
 		
 		System.out.print("First Name : ");
 		String firstName = scan.next();
 		
 		String result = test.testPattern(nameRejex, firstName);
 		System.out.println(firstName+" : "+result);
-		Assert.assertEquals("Validated", result);
-		
+		Assert.assertEquals("Validated", result);	
 	}
-
+	
+	@Test
+	public void testLastName() { //Tests Last Name
+		
+		System.out.print("Last Name : ");
+		String lastName = scan.next();
+		
+		String result = test.testPattern(nameRejex, lastName);
+		System.out.println(lastName+" : "+result);
+		Assert.assertEquals("Validated", result);
+	}
 }

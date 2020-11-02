@@ -6,8 +6,6 @@ public class TestClass {
 
 	public String testPattern(String nameRejex, String firstName) {
 		
-		return (Pattern.matches(nameRejex, firstName)?"Validated":"Invalid");
-		
+		return (Pattern.matches(nameRejex, firstName)?"Validated":"Invalid");	
 	}
-
 }
