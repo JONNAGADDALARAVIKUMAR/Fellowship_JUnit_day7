@@ -4,8 +4,8 @@ import java.util.regex.Pattern;
 
 public class TestClass {
 
-	public String testPattern(String nameRejex, String firstName) {
+	public String testPattern(String pattern, String stringToTest) {
 		
-		return (Pattern.matches(nameRejex, firstName)?"Validated":"Invalid");	
+		return (Pattern.matches(pattern, stringToTest)?"Validated":"Invalid");	
 	}
 }
