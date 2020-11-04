@@ -57,6 +57,5 @@ public class JUnitRegistrationParameterised {
 		boolean result = test.testemailPattern_WithSamples(emailExample, emailResult);
 		System.out.println(emailExample+" : "+emailResult);
 		Assert.assertTrue(result);
-	}
-	
+	}	
 }
