@@ -58,5 +58,4 @@ public class JUnitRegistrationParameterised {
 		System.out.println(emailExample+" : "+emailResult);
 		Assert.assertTrue(result);
 	}
-	
 }
