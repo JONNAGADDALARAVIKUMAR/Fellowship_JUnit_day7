@@ -50,5 +50,4 @@ public class UserRegistrationMoodAnalizer {
 		System.out.println("Mood : "+moodResult);
 		Assert.assertEquals("Happy", moodResult);
 	}
-
 }
